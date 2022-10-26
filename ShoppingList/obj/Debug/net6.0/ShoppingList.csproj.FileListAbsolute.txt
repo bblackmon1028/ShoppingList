@@ -1,0 +1,15 @@
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\bin\Debug\net6.0\ShoppingList.exe
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\bin\Debug\net6.0\ShoppingList.deps.json
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\bin\Debug\net6.0\ShoppingList.runtimeconfig.json
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\bin\Debug\net6.0\ShoppingList.dll
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\bin\Debug\net6.0\ShoppingList.pdb
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\obj\Debug\net6.0\ShoppingList.csproj.AssemblyReference.cache
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\obj\Debug\net6.0\ShoppingList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\obj\Debug\net6.0\ShoppingList.AssemblyInfoInputs.cache
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\obj\Debug\net6.0\ShoppingList.AssemblyInfo.cs
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\obj\Debug\net6.0\ShoppingList.csproj.CoreCompileInputs.cache
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\obj\Debug\net6.0\ShoppingList.dll
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\obj\Debug\net6.0\refint\ShoppingList.dll
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\obj\Debug\net6.0\ShoppingList.pdb
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\obj\Debug\net6.0\ShoppingList.genruntimeconfig.cache
+C:\Users\missb\source\repos\ShoppingList\ShoppingList\obj\Debug\net6.0\ref\ShoppingList.dll
