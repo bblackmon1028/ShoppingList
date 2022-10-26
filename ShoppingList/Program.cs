@@ -19,7 +19,7 @@ while (continueResult)
 
     for (int i = 0; i < itemsForPurchase.Count; i++)
     {
-        Console.WriteLine($"{i + 1}. {itemsForPurchase.ElementAt(i).Key}: ${itemsForPurchase.ElementAt(i).Value}");
+        Console.WriteLine($"{i + 1}. {itemsForPurchase.ElementAt(i).Key}: {itemsForPurchase.ElementAt(i).Value:C}");
     }
 
     Console.WriteLine("Please enter the number of the item you would like to purchase:");
@@ -35,15 +35,16 @@ while (continueResult)
         while (itemNumber < 1 || itemNumber > itemsForPurchase.Count);
     }
 
-    Console.WriteLine($"{itemsForPurchase.ElementAt(itemNumber - 1).Key}: ${itemsForPurchase.ElementAt(itemNumber - 1).Value} has been added to your shopping list.");
+    Console.WriteLine($"{itemsForPurchase.ElementAt(itemNumber - 1).Key}: {itemsForPurchase.ElementAt(itemNumber - 1).Value:C} has been added to your shopping list.");
 
     shoppingList.Add(itemsForPurchase.ElementAt(itemNumber - 1).Key);
 
     Console.WriteLine("Would you like to add another item? (y/n)");
     continueResult = ToContinue();
 }
-
-Console.WriteLine("Here is your shopping list:");
+Console.WriteLine("Thanks for your order!");
+Console.WriteLine("Here is your receipt: "); 
+Console.WriteLine("======================");
 foreach (string item in shoppingList)
 {
     if (itemsForPurchase.ContainsKey(item))
@@ -52,9 +53,9 @@ foreach (string item in shoppingList)
         Console.WriteLine($"{item,10} | ${itemPrice}");
     }
 }
-Console.WriteLine($"The total price of you items is: ${TotalPrice()}");
-Console.WriteLine($"Your most expensive item is: {GetMostExpensiveItem()}");
-Console.WriteLine($"Your least expensive item is: {GetLeastExpensiveItem()}");
+Console.WriteLine($"The total price of your items is: {TotalPrice():C}");
+Console.WriteLine($"Your most expensive item is: {GetMostExpensiveItem():C}");
+Console.WriteLine($"Your least expensive item is: {GetLeastExpensiveItem():C}");
 
 decimal GetMostExpensiveItem()
 {
