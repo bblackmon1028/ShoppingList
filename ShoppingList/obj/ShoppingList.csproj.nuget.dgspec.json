@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\missb\\source\\repos\\ShoppingList\\ShoppingList\\ShoppingList.csproj": {}
+    "C:\\Users\\bblackmon\\source\\repos\\GrandCircus\\ShoppingList\\ShoppingList\\ShoppingList.csproj": {}
   },
   "projects": {
-    "C:\\Users\\missb\\source\\repos\\ShoppingList\\ShoppingList\\ShoppingList.csproj": {
+    "C:\\Users\\bblackmon\\source\\repos\\GrandCircus\\ShoppingList\\ShoppingList\\ShoppingList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\missb\\source\\repos\\ShoppingList\\ShoppingList\\ShoppingList.csproj",
+        "projectUniqueName": "C:\\Users\\bblackmon\\source\\repos\\GrandCircus\\ShoppingList\\ShoppingList\\ShoppingList.csproj",
         "projectName": "ShoppingList",
-        "projectPath": "C:\\Users\\missb\\source\\repos\\ShoppingList\\ShoppingList\\ShoppingList.csproj",
-        "packagesPath": "C:\\Users\\missb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\missb\\source\\repos\\ShoppingList\\ShoppingList\\obj\\",
+        "projectPath": "C:\\Users\\bblackmon\\source\\repos\\GrandCircus\\ShoppingList\\ShoppingList\\ShoppingList.csproj",
+        "packagesPath": "C:\\Users\\bblackmon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bblackmon\\source\\repos\\GrandCircus\\ShoppingList\\ShoppingList\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\missb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bblackmon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

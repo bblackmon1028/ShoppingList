@@ -43,7 +43,7 @@ while (continueResult)
     continueResult = ToContinue();
 }
 Console.WriteLine("Thanks for your order!");
-Console.WriteLine("Here is your receipt: "); 
+Console.WriteLine("Here is your receipt: ");
 Console.WriteLine("======================");
 foreach (string item in shoppingList)
 {
@@ -56,41 +56,60 @@ foreach (string item in shoppingList)
 Console.WriteLine($"The total price of your items is: {TotalPrice():C}");
 Console.WriteLine($"Your most expensive item is: {GetMostExpensiveItem():C}");
 Console.WriteLine($"Your least expensive item is: {GetLeastExpensiveItem():C}");
+Console.WriteLine("\nItems in order from least expensive to most expensive:");
+GetOrderedList(itemsForPurchase);
+
+List<decimal> GetItemValueFromDictionary(Dictionary<string, decimal> inventoryList, List<string> purchaseList)
+{
+    List<decimal> purchaseListPriceList = new List<decimal>();
+    foreach (string item in purchaseList)
+    {
+        if (inventoryList.ContainsKey(item))
+        {
+            decimal itemPrice = inventoryList.GetValueOrDefault(item);
+            purchaseListPriceList.Add(itemPrice);
+        }
+    }
+    return purchaseListPriceList;
+}
+
+void GetOrderedList(Dictionary<string, decimal> inventoryList)
+{
+    Dictionary<string, decimal> shoppingListItemsAndPrice = new Dictionary<string, decimal>();
+    foreach (string item in shoppingList)
+    {
+        if (inventoryList.ContainsKey(item))
+        {
+            decimal itemPrice = itemsForPurchase.GetValueOrDefault(item);
+
+            if (!shoppingListItemsAndPrice.ContainsKey(item))
+            {
+                shoppingListItemsAndPrice.Add(item, itemPrice);
+            }
+        }
+    }
+    foreach(KeyValuePair<string, decimal> item in shoppingListItemsAndPrice.OrderBy(key => key.Value))
+    {
+        Console.WriteLine($"{item.Key,10} | ${item.Value}");
+    }
+}
 
 decimal GetMostExpensiveItem()
 {
-    List<decimal> shoppingListPriceList = new List<decimal>();
-    foreach (string item in shoppingList)
-    {
-        if (itemsForPurchase.ContainsKey(item))
-        {
-            decimal itemPrice = itemsForPurchase.GetValueOrDefault(item);
-            shoppingListPriceList.Add(itemPrice);
-        }
-    }
-    decimal highestPrice = shoppingListPriceList.OrderByDescending(x => x).FirstOrDefault();
+    decimal highestPrice = GetItemValueFromDictionary(itemsForPurchase, shoppingList).OrderByDescending(x => x).FirstOrDefault();
     return highestPrice;
 }
 
 decimal GetLeastExpensiveItem()
 {
-    List<decimal> shoppingListPriceList = new List<decimal>();
-    foreach (string item in shoppingList)
-    {
-        if (itemsForPurchase.ContainsKey(item))
-        {
-            decimal itemPrice = itemsForPurchase.GetValueOrDefault(item);
-            shoppingListPriceList.Add(itemPrice);
-        }
-    }
-    decimal lowestPrice = shoppingListPriceList.OrderBy(x => x).FirstOrDefault();
+    decimal lowestPrice = GetItemValueFromDictionary(itemsForPurchase, shoppingList).OrderBy(x => x).FirstOrDefault();
     return lowestPrice;
 }
 
 bool ToContinue()
 {
     string answer = Console.ReadLine();
-    if ((answer.Contains("y")) || (answer.Contains("yes")))
+    if (answer.Contains("y") || answer.Contains("yes"))
     {
         return true;
     }
